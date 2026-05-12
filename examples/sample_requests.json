@@ -1,0 +1,32 @@
+[
+    {
+        "id": "req_001",
+        "scenario": "Mất thẻ (Ưu tiên Cao)",
+        "expected_intent": "lost_or_stolen_card",
+        "query": "Tôi vừa bị mất ví, trong đó có thẻ VISA của ngân hàng. Tôi cần khóa thẻ ngay lập tức để tránh bị kẻ gian rút sạch tiền!"
+    },
+    {
+        "id": "req_002",
+        "scenario": "Chuyển tiền bị lỗi (Ưu tiên Trung bình)",
+        "expected_intent": "transfer_not_received_by_recipient",
+        "query": "Tôi đã thực hiện chuyển khoản cho đối tác từ sáng hôm qua. Tài khoản của tôi đã bị trừ tiền nhưng bên kia vẫn báo chưa nhận được."
+    },
+    {
+        "id": "req_003",
+        "scenario": "Hỏi về ví điện tử (Ưu tiên Thấp)",
+        "expected_intent": "apple_pay_or_google_pay",
+        "query": "Chào ngân hàng, cho tôi hỏi làm thế nào để liên kết thẻ ATM của mình vào ứng dụng Apple Pay trên iPhone?"
+    },
+    {
+        "id": "req_004",
+        "scenario": "Nuốt thẻ tại ATM (Ưu tiên Cao)",
+        "expected_intent": "card_swallowed",
+        "query": "Cấp cứu! Máy ATM của các bạn vừa nuốt mất thẻ của tôi khi tôi đang rút tiền tại KTX Khu A. Tôi phải làm sao đây?"
+    },
+    {
+        "id": "req_005",
+        "scenario": "Xác minh nguồn tiền (Nghiệp vụ, ưu tiên Trung bình)",
+        "expected_intent": "verify_source_of_funds",
+        "query": "Tôi nhận được email yêu cầu xác minh nguồn gốc số tiền cho giao dịch quốc tế ngày hôm qua, tôi cần phải cung cấp những giấy tờ gì?"
+    }
+]
