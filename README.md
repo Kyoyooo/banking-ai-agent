@@ -40,8 +40,8 @@ banking-ai-agent/
 │   ├── sample_requests.json  # Một vài câu hỏi kiểm thử
 │   └── run_test.py           # Script chạy kiểm thử tự động
 ├── notebook/
-│   ├── Ollama_API.ipynb      # Khởi tạo API cho mô hình `gpt-oss:20b` trên `Ollama`
-│   └── Intent_API.ipynb      # Khởi tạo API cho mô hình `llama-3-8b-banking-intent`
+│   ├── Ollama_API.ipynb      # Khởi tạo API cho mô hình gpt-oss:20b trên Ollama
+│   └── Intent_API.ipynb      # Khởi tạo API cho mô hình llama-3-8b-banking-intent
 ├── requirements.txt          # Danh sách thư viện cần thiết
 ├── run.py                    # File khởi chạy ứng dụng chính
 └── README.md                 # Giới thiệu về đồ án và Hướng dẫn chi tiết
