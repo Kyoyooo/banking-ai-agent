@@ -5,8 +5,11 @@ class DraftNode:
     def __init__(self):
         self.llm_client = OllamaClient()
 
-    def process(self, message: str, intent: str, priority: str, policy: str) -> DraftResult:
-        prompt = f"""You are a professional and empathetic Banking AI Customer Support Agent.
+    def process(self, message: str, intent: str, priority: str, policy: str, lang: str) -> DraftResult:
+        # Xác định ngôn ngữ mục tiêu
+        target_lang = "Vietnamese" if lang == "vi" else "English"
+        
+        prompt = f"""You are a professional Banking AI Customer Support Agent.
 Draft a reply to the customer based on the following context:
 
 - Customer Message: "{message}"
@@ -15,18 +18,15 @@ Draft a reply to the customer based on the following context:
 - Official Banking Policy to follow: {policy}
 
 Guidelines:
-1. Be polite and address the customer's concern immediately.
+1. Address the customer's concern immediately and politely.
 2. Incorporate the instructions from the Official Banking Policy exactly. Do not invent rules or fees.
-3. If the priority is High, express empathy and urgency.
+3. IMPORTANT: You MUST write the complete response in {target_lang}. Do not mix languages.
 4. Keep the response concise but highly informative.
-5. Answer in the same language as the customer message.
 
-Draft Reply:"""
+Draft Reply (in {target_lang}):"""
         
-        # Gọi Ollama sinh text
         draft_text = self.llm_client.generate(prompt=prompt, temperature=0.3)
         
-        # Kiểm tra xem có chỗ nào bị trống thông tin cần điền tay không
         missing = []
         if "[Insert" in draft_text or "XXX" in draft_text:
             missing.append("Cần điền thông tin cá nhân cụ thể vào các trường có sẵn.")

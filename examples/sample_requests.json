@@ -1,32 +1,127 @@
 [
     {
         "id": "req_001",
-        "scenario": "Mất thẻ (Ưu tiên Cao)",
         "expected_intent": "lost_or_stolen_card",
         "query": "Tôi vừa bị mất ví, trong đó có thẻ VISA của ngân hàng. Tôi cần khóa thẻ ngay lập tức để tránh bị kẻ gian rút sạch tiền!"
     },
     {
         "id": "req_002",
-        "scenario": "Chuyển tiền bị lỗi (Ưu tiên Trung bình)",
         "expected_intent": "transfer_not_received_by_recipient",
         "query": "Tôi đã thực hiện chuyển khoản cho đối tác từ sáng hôm qua. Tài khoản của tôi đã bị trừ tiền nhưng bên kia vẫn báo chưa nhận được."
     },
     {
         "id": "req_003",
-        "scenario": "Hỏi về ví điện tử (Ưu tiên Thấp)",
         "expected_intent": "apple_pay_or_google_pay",
         "query": "Chào ngân hàng, cho tôi hỏi làm thế nào để liên kết thẻ ATM của mình vào ứng dụng Apple Pay trên iPhone?"
     },
     {
         "id": "req_004",
-        "scenario": "Nuốt thẻ tại ATM (Ưu tiên Cao)",
         "expected_intent": "card_swallowed",
         "query": "Cấp cứu! Máy ATM của các bạn vừa nuốt mất thẻ của tôi khi tôi đang rút tiền tại KTX Khu A. Tôi phải làm sao đây?"
     },
     {
         "id": "req_005",
-        "scenario": "Xác minh nguồn tiền (Nghiệp vụ, ưu tiên Trung bình)",
         "expected_intent": "verify_source_of_funds",
         "query": "Tôi nhận được email yêu cầu xác minh nguồn gốc số tiền cho giao dịch quốc tế ngày hôm qua, tôi cần phải cung cấp những giấy tờ gì?"
+    },
+    {
+        "id": "req_006",
+        "expected_intent": "automatic_top_up",
+        "query": "Is there a limit when using auto top-up?"
+    },
+    {
+        "id": "req_007",
+        "expected_intent": "failed_transfer",
+        "query": "My attempted transfer failed."
+    },
+    {
+        "id": "req_008",
+        "expected_intent": "card_acceptance",
+        "query": "Will any business take this card?"
+    },
+    {
+        "id": "req_009",
+        "expected_intent": "activate_my_card",
+        "query": "I got my new card. How do I activate it?"
+    },
+    {
+        "id": "req_010",
+        "expected_intent": "pending_card_payment",
+        "query": "How long does it take to authorise a payment?"
+    },
+    {
+        "id": "req_011",
+        "expected_intent": "pending_top_up",
+        "query": "What is going on? My top-up is still pending. I use your system all the time but now it is just showing as pending."
+    },
+    {
+        "id": "req_012",
+        "expected_intent": "transfer_not_received_by_recipient",
+        "query": "I transferred some money but the receiver can't pick it up for some reason."
+    },
+    {
+        "id": "req_013",
+        "expected_intent": "reverted_card_payment?",
+        "query": "I was contacted by a seller with a message that they never received my money. I am 100% sure it was taken from my account so I definitely need this sorted out soon."
+    },
+    {
+        "id": "req_014",
+        "expected_intent": "receiving_money",
+        "query": "can I transfer my salary if it's in a different currency?"
+    },
+    {
+        "id": "req_015",
+        "expected_intent": "direct_debit_payment_not_recognised",
+        "query": "There is a direct debit that's not mine."
+    },
+    {
+        "id": "req_016",
+        "expected_intent": "unable_to_verify_identity",
+        "query": "I am having difficulties to verify my identity."
+    },
+    {
+        "id": "req_017",
+        "expected_intent": "why_verify_identity",
+        "query": "I won't verify my identity."
+    },
+    {
+        "id": "req_018",
+        "expected_intent": "card_swallowed",
+        "query": "My card has been swallowed by an ATM"
+    },
+    {
+        "id": "req_019",
+        "expected_intent": "card_delivery_estimate",
+        "query": "I need my card quickly"
+    },
+    {
+        "id": "req_020",
+        "expected_intent": "top_up_by_cash_or_cheque",
+        "query": "I want to do a cash top-up"
+    },
+    {
+        "id": "req_021",
+        "expected_intent": "exchange_via_app",
+        "query": "I would like to exchange some currency."
+    },
+    {
+        "id": "req_022",
+        "expected_intent": "card_about_to_expire",
+        "query": "My card is about to expire. What do I need to do?"
+    },
+    {
+        "id": "req_023",
+        "expected_intent": "balance_not_updated_after_bank_transfer",
+        "query": "Why isn't the transfer on my account showing up?"
+    },
+    {
+        "id": "req_024",
+        "expected_intent": "extra_charge_on_statement",
+        "query": "I'm not okay with this fee on my statement."
+    },
+    {
+        "id": "req_025",
+        "expected_intent": "compromised_card",
+        "query": "I think someone copied the numbers on my card and is using them."
     }
 ]

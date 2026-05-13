@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
 
-# Các Schema cho từng Node (Giữ nguyên như đã thiết kế)
+# Các Schema cho từng Node
 class IntentResult(BaseModel):
     intent: str
     confidence: float
@@ -39,4 +39,4 @@ class AgentRequest(BaseModel):
 class AgentResponse(BaseModel):
     final_response: str
     decision: str
-    trace: WorkflowTrace # Hiển thị chi tiết từng bước cho thầy xem [cite: 192]
+    trace: WorkflowTrace 
