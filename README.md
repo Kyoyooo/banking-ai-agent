@@ -30,17 +30,21 @@ Hệ thống vận hành thông qua bộ điều phối (Orchestrator) đi qua 6
 ```text
 banking-ai-agent/
 ├── app/
-│   ├── agent/           # Bộ điều phối (Orchestrator)
-│   ├── clients/         # Các Client kết nối LLM (Base, Ollama)
-│   ├── core/            # Cấu hình hệ thống (Settings, Schemas)
-│   ├── data/            # Knowledge Base (Policies)
-│   ├── nodes/           # 6 Nodes xử lý chính của Agent
-│   └── main.py          # Khởi tạo FastAPI Server
+│   ├── agent/                # Bộ điều phối (Orchestrator)
+│   ├── clients/              # Các Client kết nối LLM (Base, Ollama)
+│   ├── core/                 # Cấu hình hệ thống (Settings, Schemas)
+│   ├── data/                 # Knowledge Base (Policies)
+│   ├── nodes/                # 6 Nodes xử lý chính của Agent
+│   └── main.py               # Khởi tạo FastAPI Server
 ├── examples/
 │   ├── sample_requests.json  # Một vài câu hỏi kiểm thử
 │   └── run_test.py           # Script chạy kiểm thử tự động
-├── requirements.txt     # Danh sách thư viện cần thiết
-└── run.py               # File khởi chạy ứng dụng chính
+├── notebook/
+│   ├── Ollama_API.ipynb      # Khởi tạo API cho mô hình `gpt-oss:20b` trên `Ollama`
+│   └── Intent_API.ipynb      # Khởi tạo API cho mô hình `llama-3-8b-banking-intent`
+├── requirements.txt          # Danh sách thư viện cần thiết
+└── run.py                    # File khởi chạy ứng dụng chính
+├── README.md                 # Hướng dẫn chi tiết
 ```
 
 ## Hướng dẫn cài đặt
