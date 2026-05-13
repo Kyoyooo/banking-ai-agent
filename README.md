@@ -84,4 +84,4 @@ python examples/run_test.py
 *Kết quả sẽ hiển thị chi tiết luồng xử lý cho từng Node từ lúc nhận câu hỏi cho đến khi ra quyết định cuối cùng.*
 
 ## Video Demonstration   
-Xem video hướng dẫn thực hiện và kết quả chạy script tại: https://drive.google.com/file/d/1nkCMTnh1gJyKRUSy-IhQYfQKEBEflATO/view?usp=sharing
+Xem video hướng dẫn thực hiện và kết quả chạy script tại: https://drive.google.com/file/d/1KLU0wDZF7eO7Vkowz1TrvGyHaeYKIlPm/view?usp=sharing
