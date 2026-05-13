@@ -21,7 +21,7 @@ Hệ thống vận hành thông qua bộ điều phối (Orchestrator) đi qua 6
 - **Validation Node**: Kiểm duyệt câu trả lời nháp để đảm bảo không có lỗi AI (hallucination), không quá ngắn và không bỏ sót thông tin placeholder.
 - **Routing Node**: Ra quyết định cuối cùng hoặc là tự động trả lời luôn với khách hàng hoặc là chuyển tiếp cho nhân viên hỗ trợ (Human Agent) trong các trường hợp khẩn cấp hoặc câu trả lời không đạt chuẩn.
 ### 2. Mô hình AI & Hạ tầng
-- **Mô hình nhận diện ý định**:  [`tazuneru/llama-3-8b-banking-intent`](https://huggingface.co/tazuneru/llama-3-8b-banking-intent) (Fine-tuned Llama-3-8B), chi tiết về mô hình: https://github.com/Kyoyooo/fine-tuning-intent-detection-model-with-banking-dataset
+- **Mô hình nhận diện ý định**:  [`tazuneru/llama-3-8b-banking-intent`](https://huggingface.co/tazuneru/llama-3-8b-banking-intent) (Fine-tuned Llama-3-8B). 
 - **Mô hình sinh văn bản**: `gpt-oss:20b` chạy trên nền tảng `Ollama`.
 - **Backend**: FastAPI (Python).
 - **Kết nối**: Sử dụng `Pinggy` để tạo Tunnel kết nối máy Local với GPU trên Google Colab.
