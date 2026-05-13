@@ -49,11 +49,10 @@ banking-ai-agent/
 
 ## Hướng dẫn cài đặt
 ### Bước 1: Thiết lập trên Google Colab
-Vì hệ thống yêu cầu GPU để chạy LLM, bạn cần chạy 2 phiên làm việc Colab độc lập (hoặc gộp chung nếu đủ VRAM):
-- **Intent API**: Chạy notebook khởi tạo Llama-3 API trên cổng `8001`.
-- **Ollama API**: Chạy notebook khởi tạo Ollama trên cổng `11434`.
-- Sử dụng lệnh `pinggy` trong notebook để lấy 2 đường link public (URL).
-- 
+Vì hệ thống cần GPU để chạy LLM, bạn cần tải lên và chạy 2 file notebook độc lập trên Google Colab (hoặc gộp chung nếu đủ VRAM):
+- **Intent API**: Chạy notebook `Ollama_API.ipynb` để khởi tạo Llama-3 API trên cổng `8001`.
+- **Ollama API**: Chạy notebook `Intent_API.ipynb` khởi tạo Ollama trên cổng `11434`.
+  
 ### Bước 2: Cài dặt tại máy Local
 **1. Clone repository:**
 ```bash
@@ -66,7 +65,7 @@ cd banking-ai-agent
 pip install -r requirements.txt
 ```
 
-**3. Cấu hình API:** Mở file `app/core/settings.py` và cập nhật 2 URL Pinggy thu được từ Colab vào:
+**3. Cấu hình API:** Mở file `app/core/settings.py` và cập nhật 2 đường dẫn public URL Pinggy thu được từ 2 file notebook trên Google Colab vào:
 - `OLLAMA_BASE_URL`
 - `INTENT_API_URL`
 
