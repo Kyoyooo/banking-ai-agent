@@ -32,23 +32,17 @@ class PriorityNode:
             'lỗi', 'sai', 'chưa nhận', 'thất bại', 'chậm', 'phí', 'không thành công', 'bị trừ'
         ]
 
-    def process(self, message: str, intent: str) -> PriorityResult:
+    def process(self, message: str, intent: str, lang: str = "vi") -> PriorityResult:
         message_lower = message.lower()
         intent_clean = intent.strip().lower()
 
         if intent_clean in self.high_intents or any(kw in message_lower for kw in self.high_keywords):
-            return PriorityResult(
-                priority="High", 
-                reason="Phát hiện ý định hoặc từ khóa liên quan đến rủi ro bảo mật, mất mát hoặc khẩn cấp."
-            )
+            reason = "Phát hiện ý định hoặc từ khóa liên quan đến rủi ro bảo mật, mất mát hoặc khẩn cấp." if lang == "vi" else "Detected intent or keywords related to security risks, loss, or emergencies."
+            return PriorityResult(priority="High", reason=reason)
             
         elif intent_clean in self.medium_intents or any(kw in message_lower for kw in self.medium_keywords):
-            return PriorityResult(
-                priority="Medium", 
-                reason="Phát hiện ý định hoặc từ khóa liên quan đến lỗi giao dịch, sai sót số tiền hoặc cần tra soát."
-            )
+            reason = "Phát hiện ý định hoặc từ khóa liên quan đến lỗi giao dịch, sai sót số tiền hoặc cần tra soát." if lang == "vi" else "Detected intent or keywords related to transaction errors, amount discrepancies, or tracing requests."
+            return PriorityResult(priority="Medium", reason=reason)
             
-        return PriorityResult(
-            priority="Low", 
-            reason="Câu hỏi tra cứu thông tin thông thường hoặc yêu cầu hướng dẫn sử dụng."
-        )
+        reason = "Câu hỏi tra cứu thông tin thông thường hoặc yêu cầu hướng dẫn sử dụng." if lang == "vi" else "General information inquiry or request for user guidelines."
+        return PriorityResult(priority="Low", reason=reason)
