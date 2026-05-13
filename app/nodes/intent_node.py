@@ -61,7 +61,6 @@ class IntentNode:
 
     def process(self, message: str) -> IntentResult:
         try:
-            # Gửi tin nhắn lên Colab để xử lý
             response = requests.get(self.api_url, params={"message": message}, timeout=60)
             response.raise_for_status()
             
