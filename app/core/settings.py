@@ -1,24 +1,3 @@
-"""
-from pydantic_settings import BaseSettings
-
-class Settings(BaseSettings):
-    APP_NAME: str = "Banking AI-Agent"
-    
-    # Cấu hình Ollama (Dùng để sinh câu trả lời nháp - Response Generation)
-    OLLAMA_BASE_URL: str = "http://localhost:11434" 
-    RESPONSE_MODEL: str = "gpt-oss-20b"
-    
-    # Cấu hình Hugging Face Model (Dùng cho Intent Detection - Đồ án 2)
-    # Sau này Node Intent sẽ dùng ID này để tự động tải về
-    INTENT_MODEL_ID: str = "tazuneru/llama-3-8b-banking-intent"
-    
-    # API Config
-    HOST: str = "0.0.0.0"
-    PORT: int = 8000
-
-settings = Settings()
-"""
-
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
